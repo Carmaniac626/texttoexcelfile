@@ -1,0 +1,45 @@
+#RF-XRFTW-2-A05F5B[11/27/2019 9:37:52 PM] 3DRF-A2-Z045-A05F5B-I00-Cm01-85A05F5B007C00780001211A7F7F7F5B2D
+ # Receiver Addr: 2
+  #TxID: A05F5B
+  #Zone: 045
+  #CMD 01 = Door/Window transmission
+  #Loop 1:    Value: 127
+  #Loop 2:    Value: 127
+  #Loop 3:    Value: 127
+  #Tamper: No
+  #Low Battery: No
+  #Jam detect: No
+  #Battery voltage: 2.6
+  #Signal strength: 91
+  #Manufacturer:  
+  #Product ID:
+  #Firmware ver: 
+  
+  
+  
+  import xlsxwriter
+import os
+os.chdir("C:\\users\\carma\\desktop")
+# Create a workbook and add a worksheet.
+workbook = xlsxwriter.Workbook('data.xlsx')
+worksheet = workbook.add_worksheet()
+
+# Add a bold format to use to highlight cells.
+bold = workbook.add_format({'bold': 1})
+
+
+# Adjust the column width.
+worksheet.set_column(1, 40, 1)
+
+# Write some data headers.
+worksheet.write('A1', 'Date', bold)
+worksheet.write('B1', 'Receiver Addr', bold)
+worksheet.write('C1', 'TxID', bold)
+worksheet.write('D1', 'Zone', bold)
+worksheet.write('E1', 'CMD', bold)
+worksheet.write('F1', 'Low Battery', bold)
+worksheet.write('G1', 'Battery Voltage', bold)
+worksheet.write('H1', 'Signal Strength', bold)
+worksheet.write('I1', 'Product ID', bold)
+worksheet.write('J1', 'Firmware version', bold)
+  
